@@ -1,10 +1,16 @@
 language: node_js
 node_js:
-  - '8'
+- '8'
 cache:
   directories:
   - node_modules
 script:
-  - npm run lint
-  - npm test
-  - npm run build
+- npm run lint
+- npm test
+- npm run build
+deploy:
+  provider: heroku
+  app: malik-build-and-deploy
+  skip_cleanup: true
+  api_key:
+    secure: exgMxWp+xRZOmkfbGrgSfKjzjjNAhaq7BH9UQAjzNQzA+6+bFUr4a8nV2A7m4hXP7Rl+jpfSRBNsjQgAtLxc/ubLqrIMdDCCwREf/b+bOxbEfmJnpu6sAiCeXqLdJdX4T0eVJp7o4UbhXvD75+u91o/SPFscVUiLLoaOMaKkT34r92W66t6/qlymuH0RiG9oR5GTA1N4D0konR2+TEIay1xaBXHyXNmzkC3bzUDVPV1v362RxKVRZbCM5uCyDuC/AOotlF/fGZrOxWw1WZYvlHzJUw5E38+/AE2UMKGYZhe5WwzFH9DN3wFEiu+/j81vmvmvDW6eXL+h/ClZN/z/5PiDeBlVvYzsYBEGhyYK8AVMX9PrFzipilCYuA0vG0rpBjt7zUoW058Qdu/+buBPFWu/EdYk1oi5Nh+GvZ7/fHvUbjLEwBmc37hLgLmSxQoqd2EqlcIsiPrJwIZ+t2bHpsvLrkxfon9efZaJUM7uw6ZHrE8N55/KhpDDupdkY3nrco8L49kP2AHimNLNZVEEKIT//MsQJyG7fxvf0IBi4CUR6xh+12v613xUPjtXMVxKkeiXcVuqIo/e0JUvsNeJErH+nCaBarFovd74DI/CuOSgX4XNjv1HQ3XH9zHcr4ZnAA3P3HG2fwS6DVhWICxORdi5jiHF1EiBEGj/F+BGPl0=
